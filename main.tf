@@ -3,6 +3,7 @@
 module "eks" {
   source                  = "./EKS"
   aws_public_subnet       = module.vpc.aws_public_subnet
+  availability_zone       = module.vpc.availability_zone
   vpc_id                  = module.vpc.vpc_id
   cluster_name            = "module-eks-${random_string.suffix.result}"
   endpoint_public_access  = true
