@@ -5,6 +5,7 @@ resource "aws_eks_cluster" "tech-it-project-3" {
 
   vpc_config {
     subnet_ids              = var.aws_public_subnet
+    availability_zone       = var.availability_zone
     endpoint_public_access  = var.endpoint_public_access
     endpoint_private_access = var.endpoint_private_access
     public_access_cidrs     = var.public_access_cidrs
